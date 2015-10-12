@@ -24,11 +24,11 @@ import com.mvcoding.financius.feature.PresenterView;
 
 import javax.inject.Inject;
 
-@ActivityScope class SplashPresenter extends Presenter<SplashPresenter.View> {
+@ActivityScope class SplashPresenterOld extends Presenter<SplashPresenterOld.View> {
     private final Session session;
     private final UserSettings userSettings;
 
-    @Inject SplashPresenter(@NonNull Session session, @NonNull UserSettings userSettings) {
+    @Inject SplashPresenterOld(@NonNull Session session, @NonNull UserSettings userSettings) {
         this.session = session;
         this.userSettings = userSettings;
     }

@@ -13,6 +13,7 @@
  */
 
 apply plugin: 'com.android.application'
+apply plugin: 'com.android.databinding'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'io.fabric'
@@ -104,7 +105,7 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.9.0'
 
     // Debugging
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.1@aar') {
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.2@aar') {
         transitive = true
     }
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-SNAPSHOT'

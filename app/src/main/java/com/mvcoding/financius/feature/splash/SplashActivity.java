@@ -25,8 +25,8 @@ import com.mvcoding.financius.feature.overview.OverviewActivity;
 
 import javax.inject.Inject;
 
-public class SplashActivity extends BaseActivity<SplashPresenter.View, SplashComponent> implements SplashPresenter.View {
-    @Inject SplashPresenter presenter;
+public class SplashActivity extends BaseActivity<SplashPresenterOld.View, SplashComponent> implements SplashPresenterOld.View {
+    @Inject SplashPresenterOld presenter;
 
     @Override protected int getLayoutId() {
         return R.layout.activity_splash;
@@ -40,11 +40,11 @@ public class SplashActivity extends BaseActivity<SplashPresenter.View, SplashCom
         component.inject(this);
     }
 
-    @NonNull @Override protected Presenter<SplashPresenter.View> getPresenter() {
+    @NonNull @Override protected Presenter<SplashPresenterOld.View> getPresenter() {
         return presenter;
     }
 
-    @NonNull @Override protected SplashPresenter.View getPresenterView() {
+    @NonNull @Override protected SplashPresenterOld.View getPresenterView() {
         return this;
     }
 

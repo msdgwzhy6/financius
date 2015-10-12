@@ -19,6 +19,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:1.4.0-beta6'
+        classpath "com.android.databinding:dataBinder:1.0-rc1"
         classpath 'me.tatarka:gradle-retrolambda:3.2.2'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
         //noinspection GradleDynamicVersion

@@ -25,16 +25,16 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-public class SplashPresenterTest extends BasePresenterTest<SplashPresenter, SplashPresenter.View> {
+public class SplashPresenterOldTest extends BasePresenterTest<SplashPresenterOld, SplashPresenterOld.View> {
     @Mock private Session session;
     @Mock private UserSettings userSettings;
 
-    @Override protected SplashPresenter createPresenter() {
-        return new SplashPresenter(session, userSettings);
+    @Override protected SplashPresenterOld createPresenter() {
+        return new SplashPresenterOld(session, userSettings);
     }
 
-    @Override protected SplashPresenter.View createView() {
-        return mock(SplashPresenter.View.class);
+    @Override protected SplashPresenterOld.View createView() {
+        return mock(SplashPresenterOld.View.class);
     }
 
     @Test public void onViewAttached_startsTutorial_whenSessionIsNotLoggedIn() {

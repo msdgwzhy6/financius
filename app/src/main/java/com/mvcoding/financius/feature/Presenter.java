@@ -25,7 +25,7 @@ public class Presenter<V extends PresenterView> {
     private V view;
     private CompositeSubscription subscriptions;
 
-    @CallSuper protected void onViewAttached(@NonNull V view) {
+    @CallSuper protected void onViewAttached(V view) {
         if (this.view != null) {
             throw new IllegalStateException("View " + this.view + " is already attached. Cannot attach " + view);
         }
@@ -44,7 +44,7 @@ public class Presenter<V extends PresenterView> {
         }
     }
 
-    @CallSuper protected void unsubscribeOnDetach(@NonNull Subscription subscription) {
+    @CallSuper protected void unsubscribeOnDetach(Subscription subscription) {
         if (subscriptions == null) {
             subscriptions = new CompositeSubscription();
         }
